@@ -74,3 +74,14 @@
         });
       });
     });
+
+
+    const nav = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 10) {
+    nav.classList.add("shadow-md");
+  } else {
+    nav.classList.remove("shadow-md");
+  }
+});
