@@ -280,44 +280,53 @@ body {
 
 
 
-
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
   .premium-tree::before {
-    left: 1.5rem;
+    left: 20px;
   }
 
   .premium-tree > div:not(:first-child) {
     width: 100%;
-    margin-left: 0;
-    padding-left: 4rem;
-    padding-right: 0;
+    margin-left: 0 !important;
+    padding-left: 52px !important;
+    padding-right: 0 !important;
   }
 
   .tree-node.left,
   .tree-node.right {
-    left: 0;
-    right: auto;
+    left: 0 !important;
+    right: auto !important;
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
   }
 
-  .tree-branch.left,
-  .tree-branch.right {
-    left: 1.5rem;
-    right: auto;
-    width: 2rem;
-    transform: none;
+  .tree-branch {
+    display: none !important;
   }
 
   .project-card {
-    padding: 1.25rem;
-    border-radius: 1.5rem;
+    width: 100%;
+    padding: 18px;
+    border-radius: 24px;
   }
 
   .project-card h3 {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
 
   .project-card p {
-    font-size: 0.95rem;
+    font-size: 14px;
     line-height: 1.7;
   }
+
+  .tech-list span {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
