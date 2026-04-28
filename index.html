@@ -37,9 +37,9 @@
 
   <!-- Navbar -->
   <!-- <header class="sticky top-0 mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10 "> -->
-
-    <!-- <header class="fixed top-0 left-0 w-full z-50 bg-white/40 backdrop-blur-xl border-b border-white/30 shadow-sm transition-all duration-300 flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
- 
+<header class="fixed top-0 left-0 z-50 w-full border-b border-white/3 bg-white/10 backdrop-blur-1.5xl transition-all duration-300">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+    <a href="#home" class="text-lg font-black tracking-tight">
       KaranDev<span class="text-accent">.</span>
     </a>
 
@@ -56,55 +56,30 @@
       View Resume
     </a>
 
-    <button id="menuBtn" class="grid h-11 w-11 place-items-center rounded-full border border-slate-300 md:hidden" aria-label="Open menu">
+    <button id="menuBtn" class="grid h-11 w-11 place-items-center rounded-full border border-slate-300 bg-white/40 md:hidden" aria-label="Open menu">
       <i data-lucide="menu" class="h-5 w-5"></i>
     </button>
-  </header> -->
-
-
-  <header class="fixed top-0 left-0 w-full z-50 
-bg-white/20 backdrop-blur-xl 
-border-b border-white/10 
-transition-all duration-300">
-
-  <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-    
-    <!-- Logo -->
-    <h1 class="font-bold text-lg">KaranDev<span class="text-accent">.</span></h1>
-
-    <!-- Nav -->
-    <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-800">
-      <a href="#home" class="hover:text-accent">Home</a>
-      <a href="#projects" class="hover:text-accent">Projects</a>
-      <a href="#skills" class="hover:text-accent">Skills</a>
-      <a href="#about" class="hover:text-accent">About</a>
-      <a href="#contact" class="hover:text-accent">Contact</a>
-    </nav>
-
-    <!-- Resume Button -->
-    <a href="./resume.pdf" target="_blank"
-       class="rounded-full bg-black/90 px-5 py-2.5 text-white font-bold hover:bg-accent transition">
-       View Resume
-    </a>
-
   </div>
 </header>
 
-  <div id="mobileMenu" class="mx-6 hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-clean md:hidden">
-    <a href="#home" class="block py-2 font-bold text-accent">Home</a>
-    <a href="#projects" class="block py-2 font-bold">Projects</a>
-    <a href="#skills" class="block py-2 font-bold">Skills</a>
-    <a href="#about" class="block py-2 font-bold">About</a>
-    <a href="#contact" class="block py-2 font-bold">Contact</a>
-    <a href="./resume.pdf" target="_blank" class="mt-2 flex items-center gap-2 rounded-xl bg-accent px-4 py-3 font-black text-white">
-      <i data-lucide="eye" class="h-5 w-5"></i>
-      View Resume
-    </a>
-  </div>
+<div id="mobileMenu" class="fixed left-6 right-6 top-20 z-50 hidden rounded-2xl border border-white/30 bg-white/80 p-4 shadow-clean backdrop-blur-xl md:hidden">
+  <a href="#home" class="block py-2 font-bold text-accent">Home</a>
+  <a href="#projects" class="block py-2 font-bold">Projects</a>
+  <a href="#skills" class="block py-2 font-bold">Skills</a>
+  <a href="#about" class="block py-2 font-bold">About</a>
+  <a href="#contact" class="block py-2 font-bold">Contact</a>
+  <a href="./resume.pdf" target="_blank" class="mt-2 flex items-center gap-2 rounded-xl bg-accent px-4 py-3 font-black text-white">
+    <i data-lucide="eye" class="h-5 w-5"></i>
+    View Resume
+  </a>
+</div>
+
 
   <main>
     <!-- Hero -->
-    <section id="home" class="mx-auto grid min-h-[78vh] max-w-7xl items-center gap-12 px-6 py-12 lg:grid-cols-[1fr_0.85fr] lg:px-10 lg:py-16">
+    <!-- <section id="home" class="mx-auto grid min-h-[78vh] max-w-7xl items-center gap-12 px-6 py-12 lg:grid-cols-[1fr_0.85fr] lg:px-10 lg:py-16">
+      <section id="home" class="mx-auto grid min-h-[78vh] max-w-7xl items-center gap-12 px-6 pt-32 pb-12 lg:grid-cols-[1fr_0.85fr] lg:px-10 lg:pt-36 lg:pb-16"></section>
+      
       <div class="reveal">
         <p class="mb-4 text-xl font-medium text-slate-600">Hey, I'm Karan 👋</p>
 
@@ -141,7 +116,49 @@ transition-all duration-300">
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+
+
+
+    <section id="home" class="mx-auto grid min-h-screen max-w-7xl items-center gap-10 px-6 pt-32 pb-16 lg:grid-cols-[1fr_0.85fr] lg:px-10 lg:pt-36">
+  <div class="reveal text-center lg:text-left">
+    <p class="mb-4 text-lg font-medium text-slate-600 sm:text-xl">
+      Hey, I'm Karan 👋
+    </p>
+
+    <h1 class="hero-title text-5xl font-black leading-[0.95] text-ink sm:text-6xl md:text-7xl lg:text-8xl">
+      <span class="gradient-word">Fullstack</span><br />
+      Developer
+    </h1>
+
+    <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl lg:mx-0">
+      I build scalable web applications, real-time systems, and automation tools with clean UI, reliable backend logic, and practical problem solving.
+    </p>
+
+    <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+      <a href="#contact" class="magnetic-btn inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-base font-extrabold text-white transition hover:-translate-y-1 hover:shadow-clean">
+        Get In Touch
+      </a>
+
+      <a href="#projects" class="magnetic-btn inline-flex items-center justify-center rounded-xl border border-ink px-6 py-3 text-base font-extrabold text-ink transition hover:-translate-y-1 hover:bg-ink hover:text-white">
+        Browse Projects
+      </a>
+
+      <a href="./resume.pdf" target="_blank" class="magnetic-btn inline-flex items-center justify-center gap-2 rounded-xl border border-accent px-6 py-3 text-base font-extrabold text-accent transition hover:-translate-y-1 hover:bg-accent hover:text-white">
+        <i data-lucide="eye" class="h-5 w-5"></i>
+        View Resume
+      </a>
+    </div>
+  </div>
+
+  <div class="reveal flex justify-center lg:justify-end">
+    <div class="outline-circle grid h-[260px] w-[260px] place-items-center rounded-full border border-purple-300 sm:h-[330px] sm:w-[330px] lg:h-[430px] lg:w-[430px]">
+      <div class="avatar-inner grid h-[220px] w-[220px] place-items-center overflow-hidden rounded-full bg-slate-200 sm:h-[280px] sm:w-[280px] lg:h-[345px] lg:w-[345px]">
+        <img src="image.png" alt="Karan Rathod" class="h-full w-full object-cover" />
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Projects -->
     <section id="projects" class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
