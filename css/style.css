@@ -3,6 +3,12 @@ body {
       overflow-x: hidden;
     }
 
+    html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
     body::before {
       content: "";
       position: fixed;
@@ -269,3 +275,49 @@ body {
       .tree-branch.left,
       .tree-branch.right { left: 1.5rem; right: auto; width: 2rem; transform: none; }
     }
+
+
+
+
+
+
+    @media (max-width: 768px) {
+  .premium-tree::before {
+    left: 1.5rem;
+  }
+
+  .premium-tree > div:not(:first-child) {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 4rem;
+    padding-right: 0;
+  }
+
+  .tree-node.left,
+  .tree-node.right {
+    left: 0;
+    right: auto;
+  }
+
+  .tree-branch.left,
+  .tree-branch.right {
+    left: 1.5rem;
+    right: auto;
+    width: 2rem;
+    transform: none;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
