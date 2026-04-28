@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karan Rathod | Full Stack Developer</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'sans-serif'] },
+          colors: {
+            accent: '#6d16f2',
+            ink: '#20222d'
+          },
+          boxShadow: {
+            clean: '0 18px 50px rgba(32, 34, 45, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="bg-[#f7f7fb] text-ink selection:bg-purple-100 selection:text-accent">
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="floating-blob blob-one"></div>
+  <div class="floating-blob blob-two"></div>
+
+  <!-- Navbar -->
+  <header class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
+    <a href="#home" class="text-lg font-black tracking-tight">
+      KaranDev<span class="text-accent">.</span>
+    </a>
+
+    <nav class="hidden items-center gap-9 text-base font-extrabold md:flex">
+      <a href="#home" class="nav-link text-accent transition hover:text-accent">Home</a>
+      <a href="#projects" class="nav-link transition hover:text-accent">Projects</a>
+      <a href="#skills" class="nav-link transition hover:text-accent">Skills</a>
+      <a href="#about" class="nav-link transition hover:text-accent">About</a>
+      <a href="#contact" class="nav-link transition hover:text-accent">Contact</a>
+    </nav>
+
+    <a href="./resume.pdf" target="_blank" class="hidden items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-black text-white transition hover:scale-105 hover:bg-accent md:inline-flex" aria-label="View Resume">
+      <i data-lucide="file-text" class="h-5 w-5"></i>
+      View Resume
+    </a>
+
+    <button id="menuBtn" class="grid h-11 w-11 place-items-center rounded-full border border-slate-300 md:hidden" aria-label="Open menu">
+      <i data-lucide="menu" class="h-5 w-5"></i>
+    </button>
+  </header>
+
+  <div id="mobileMenu" class="mx-6 hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-clean md:hidden">
+    <a href="#home" class="block py-2 font-bold text-accent">Home</a>
+    <a href="#projects" class="block py-2 font-bold">Projects</a>
+    <a href="#skills" class="block py-2 font-bold">Skills</a>
+    <a href="#about" class="block py-2 font-bold">About</a>
+    <a href="#contact" class="block py-2 font-bold">Contact</a>
+    <a href="./resume.pdf" target="_blank" class="mt-2 flex items-center gap-2 rounded-xl bg-accent px-4 py-3 font-black text-white">
+      <i data-lucide="eye" class="h-5 w-5"></i>
+      View Resume
+    </a>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="mx-auto grid min-h-[78vh] max-w-7xl items-center gap-12 px-6 py-12 lg:grid-cols-[1fr_0.85fr] lg:px-10 lg:py-16">
+      <div class="reveal">
+        <p class="mb-4 text-xl font-medium text-slate-600">Hey, I'm Karan 👋</p>
+
+        <h1 class="hero-title text-6xl font-black leading-[0.95] text-ink sm:text-7xl lg:text-8xl">
+          <span class="gradient-word">Fullstack</span><br />
+          Developer
+        </h1>
+
+        <p class="mt-8 max-w-2xl text-xl leading-8 text-slate-600">
+          I build scalable web applications, real-time systems, and automation tools with clean UI, reliable backend logic, and practical problem solving.
+        </p>
+
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a href="#contact" class="magnetic-btn inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-base font-extrabold text-white transition hover:-translate-y-1 hover:shadow-clean">
+            Get In Touch
+          </a>
+          <a href="#projects" class="magnetic-btn inline-flex items-center justify-center rounded-xl border border-ink px-6 py-3 text-base font-extrabold text-ink transition hover:-translate-y-1 hover:bg-ink hover:text-white">
+            Browse Projects
+          </a>
+          <a href="./resume.pdf" target="_blank" class="magnetic-btn inline-flex items-center justify-center gap-2 rounded-xl border border-accent px-6 py-3 text-base font-extrabold text-accent transition hover:-translate-y-1 hover:bg-accent hover:text-white">
+            <i data-lucide="eye" class="h-5 w-5"></i>
+            View Resume
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal flex justify-center lg:justify-end">
+        <div class="outline-circle grid h-[300px] w-[300px] place-items-center rounded-full border border-purple-300 sm:h-[390px] sm:w-[390px] lg:h-[430px] lg:w-[430px]">
+          <div class="grid h-[245px] w-[245px] place-items-center overflow-hidden rounded-full bg-slate-200 sm:h-[320px] sm:w-[320px] lg:h-[345px] lg:w-[345px]">
+            <div class="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-slate-200 to-slate-100 text-center">
+              <span class="text-7xl font-black text-accent"><img src="image.png" alt=""></span>
+              <span class="mt-2 text-sm font-extrabold text-slate-500">Full Stack Developer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+      <div class="reveal flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <h2 class="text-5xl font-black tracking-tight sm:text-6xl">Projects<span class="text-accent">.</span></h2>
+        <p class="max-w-xl text-lg leading-8 text-slate-600">
+          Selected proof-of-work projects showing full-stack development, real-time systems, automation, and AI workflow thinking.
+        </p>
+      </div>
+
+      <div class="premium-tree relative mt-16">
+        <div class="reveal relative mx-auto mb-14 w-fit rounded-full border border-purple-200 bg-white px-5 py-3 text-sm font-black text-accent shadow-clean">
+          Proof of Work Growth Map
+        </div>
+
+        <div class="relative mb-16 w-full md:w-1/2 md:pr-14">
+          <span class="tree-node left">01</span>
+          <span class="tree-branch left hidden md:block"></span>
+          <div class="project-card reveal">
+            <div class="mb-4 flex items-center justify-between gap-4">
+              <span class="rounded-full bg-purple-50 px-3 py-1 text-xs font-black text-accent">REAL-TIME SYSTEM</span>
+              <i data-lucide="utensils" class="h-6 w-6 text-accent"></i>
+            </div>
+            <h3 class="text-2xl font-black">Smart Canteen System</h3>
+            <p class="mt-3 leading-7 text-slate-600">Real-time food ordering platform with student UI, admin dashboard, live order updates, and MongoDB order management.</p>
+            <div class="tech-list"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Socket.IO</span></div>
+            <div class="mt-6 flex gap-4 text-sm font-black">
+              <a href="#" class="text-accent hover:underline">Live Demo</a>
+              <a href="https://github.com/karanrathod7031/smart-canteen" target="_blank" class="text-ink hover:underline" >Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+<div class="relative ml-auto w-full md:w-1/2 md:pl-14">
+  <span class="tree-node right">05</span>
+  <span class="tree-branch right hidden md:block"></span>
+  <div class="project-card reveal">
+    <div class="mb-4 flex items-center justify-between gap-4">
+      <span class="rounded-full bg-purple-50 px-3 py-1 text-xs font-black text-accent"> FULL STACK PLATFORM </span>
+      <i data-lucide="cloud" class="h-6 w-6 text-accent"></i>
+    </div>
+    <h3 class="text-2xl font-black">EduDrive</h3>
+    <p class="mt-3 leading-7 text-slate-600"> A full-stack cloud-based platform for storing, managing, and accessing academic resources. Includes authentication, file upload system, categorized content, and user-friendly dashboard.</p>
+    <div class="tech-list"> 
+      <span>React</span> <span>Node.js</span><span>MongoDB</span><span>Auth</span><span>File Upload</span>
+    </div>
+    <div class="mt-6 flex gap-4 text-sm font-black"> <a href="#" class="text-accent hover:underline">Live Demo</a>
+      <a href="https://github.com/karanrathod7031/e-comerce-site" target="_blank" class="text-ink hover:underline"> Source Code </a>
+    </div>
+  </div>
+</div>
+
+        <div class="relative mb-16 w-full md:w-1/2 md:pr-14">
+          <span class="tree-node left">03</span>
+          <span class="tree-branch left hidden md:block"></span>
+          <div class="project-card reveal">
+            <div class="mb-4 flex items-center justify-between gap-4">
+              <span class="rounded-full bg-purple-50 px-3 py-1 text-xs font-black text-accent">AUTOMATION</span>
+              <i data-lucide="scissors" class="h-6 w-6 text-accent"></i>
+            </div>
+            <h3 class="text-2xl font-black">YouTube Shorts Generator</h3>
+            <p class="mt-3 leading-7 text-slate-600">Video processing tool that clips long videos into short-format content using PHP and FFmpeg with resolution selection and ZIP export.</p>
+            <div class="tech-list"><span>PHP</span><span>FFmpeg</span><span>Video Processing</span></div>
+            <div class="mt-6 flex gap-4 text-sm font-black">
+              <a href="#" class="text-accent hover:underline">Live Demo</a>
+              <a href="#" class="text-ink hover:underline">Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative ml-auto w-full md:w-1/2 md:pl-14">
+          <span class="tree-node right">04</span>
+          <span class="tree-branch right hidden md:block"></span>
+          <div class="project-card reveal">
+            <div class="mb-4 flex items-center justify-between gap-4">
+              <span class="rounded-full bg-purple-50 px-3 py-1 text-xs font-black text-accent">AI SYSTEM</span>
+              <i data-lucide="bot" class="h-6 w-6 text-accent"></i>
+            </div>
+            <h3 class="text-2xl font-black">Jarvis AI Assistant</h3>
+            <p class="mt-3 leading-7 text-slate-600">AI assistant concept focused on task automation, command execution, productivity workflows, and intelligent system design.</p>
+            <div class="tech-list"><span>Python</span><span>AI</span><span>Automation</span></div>
+            <div class="mt-6 flex gap-4 text-sm font-black">
+              <a href="#" class="text-accent hover:underline">Live Demo</a>
+              <a href="#" class="text-ink hover:underline">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+      <div class="reveal">
+        <h2 class="text-5xl font-black tracking-tight sm:text-6xl">Skills<span class="text-accent">.</span></h2>
+      </div>
+
+      <div class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="reveal"><h3 class="mb-6 text-2xl font-black">Frontend</h3><ul class="space-y-3 text-xl text-slate-600"><li>React.js</li><li>JavaScript</li><li>Tailwind CSS</li><li>Responsive UI</li></ul></div>
+        <div class="reveal"><h3 class="mb-6 text-2xl font-black">Backend</h3><ul class="space-y-3 text-xl text-slate-600"><li>Node.js</li><li>Express.js</li><li>PHP</li><li>REST APIs</li></ul></div>
+        <div class="reveal"><h3 class="mb-6 text-2xl font-black">Database</h3><ul class="space-y-3 text-xl text-slate-600"><li>MongoDB</li><li>MySQL</li><li>Schema Design</li><li>CRUD Systems</li></ul></div>
+        <div class="reveal"><h3 class="mb-6 text-2xl font-black">Tools</h3><ul class="space-y-3 text-xl text-slate-600"><li>Git & GitHub</li><li>Socket.IO</li><li>FFmpeg</li><li>VS Code</li></ul></div>
+      </div>
+    </section>
+
+    <!-- Journey -->
+    <section class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+      <div class="reveal"><h2 class="text-5xl font-black tracking-tight sm:text-6xl">Journey<span class="text-accent">.</span></h2></div>
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        <div class="info-card reveal">
+          <h3 class="text-2xl font-black">Education</h3>
+          <div class="mt-7 space-y-7 border-l-2 border-purple-200 pl-6">
+            <div><p class="font-black text-accent">2024 – 2027</p><h4 class="mt-1 text-xl font-black">B.E. Computer Science</h4><p class="mt-1 text-slate-600">Sant Gadge Baba Amravati University</p></div>
+            <div><p class="font-black text-accent">2021 – 2024</p><h4 class="mt-1 text-xl font-black">Diploma in Computer Engineering</h4><p class="mt-1 text-slate-600">Maharashtra State Board of Technical Education</p></div>
+          </div>
+        </div>
+        <div class="info-card reveal">
+          <h3 class="text-2xl font-black">Internship</h3>
+          <div class="mt-7 border-l-2 border-purple-200 pl-6">
+            <p class="font-black text-accent">Jun 2023 – Sep 2023</p>
+            <h4 class="mt-1 text-xl font-black">Trainee Software Developer</h4>
+            <p class="mt-1 text-slate-600">Avirat Infotech, Pune</p>
+            <ul class="mt-5 space-y-3 text-slate-600"><li>• Built a CRUD-based study material web application.</li><li>• Worked on frontend, backend, and database integration.</li><li>• Improved application usability and development workflow.</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+      <div class="reveal">
+        <h2 class="text-5xl font-black tracking-tight sm:text-6xl">My Story<span class="text-accent">.</span></h2>
+      </div>
+
+      <div class="reveal mt-9 max-w-6xl space-y-6 text-xl leading-9 text-slate-600">
+        <p>My journey as a developer started by building practical projects that solve real problems. I began with PHP and MySQL projects, then moved toward full-stack systems using React, Node.js, MongoDB, and real-time communication.</p>
+        <p>I enjoy building applications where frontend, backend, and database work together as a complete product. My strongest project is the Smart Canteen System because it includes authentication, order management, admin workflows, and real-time updates.</p>
+        <p>Currently, I am improving my Data Structures & Algorithms, backend development, and system design skills to become internship-ready for strong software engineering roles.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+      <div class="grid gap-10 md:grid-cols-2 md:items-start">
+        <div class="reveal">
+          <h2 class="text-5xl font-black tracking-tight sm:text-6xl">Contact<span class="text-accent">.</span></h2>
+          <p class="mt-5 text-lg leading-8 text-slate-600">Want to work together or have an opportunity? Send me a message directly.</p>
+          <div class="mt-8 space-y-4 text-slate-600 font-semibold">
+            <p>📧 karanrathod7031@gmail.com</p>
+            <p>💻 github.com/karanrathod7031</p>
+            <p>🔗 linkedin.com/in/karanrathod2027</p>
+          </div>
+
+          <a href="./resume.pdf" target="_blank" class="magnetic-btn mt-8 inline-flex items-center gap-2 rounded-xl border border-accent px-6 py-3 font-black text-accent transition hover:-translate-y-1 hover:bg-accent hover:text-white">
+            <i data-lucide="file-text" class="h-5 w-5"></i>
+            View / Download Resume
+          </a>
+        </div>
+
+        <form action="https://formsubmit.co/karanrathod7031@gmail.com" method="POST" class="contact-card reveal">
+          <input type="hidden" name="_subject" value="New Portfolio Message">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+
+          <div class="grid gap-4">
+            <input type="text" name="name" placeholder="Your Name" required class="w-full rounded-xl border border-slate-200 bg-[#f7f7fb] p-3 outline-none focus:border-accent">
+            <input type="email" name="email" placeholder="Your Email" required class="w-full rounded-xl border border-slate-200 bg-[#f7f7fb] p-3 outline-none focus:border-accent">
+            <input type="text" name="subject" placeholder="Subject" required class="w-full rounded-xl border border-slate-200 bg-[#f7f7fb] p-3 outline-none focus:border-accent">
+            <textarea name="message" rows="5" placeholder="Your Message" required class="w-full resize-none rounded-xl border border-slate-200 bg-[#f7f7fb] p-3 outline-none focus:border-accent"></textarea>
+            <button type="submit" class="magnetic-btn rounded-xl bg-accent py-3 font-black text-white transition hover:-translate-y-1 hover:shadow-clean">Send Message</button>
+          </div>
+          <p class="mt-3 text-center text-xs text-slate-400">First time use → check email to activate form</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-500 md:flex-row md:items-center md:justify-between lg:px-10">
+    <div class="flex gap-7 text-base font-black">
+      <a href="#home" class="text-accent">Home</a>
+      <a href="#projects" class="hover:text-accent">Projects</a>
+      <a href="#about" class="hover:text-accent">About</a>
+      <a href="#contact" class="hover:text-accent">Contact</a>
+    </div>
+    <p>© 2026 Karan Rathod. Made with <span class="text-accent">♥</span></p>
+  </footer>
+
+ <script src="js/script.js"></script>
+</body>
+</html>
